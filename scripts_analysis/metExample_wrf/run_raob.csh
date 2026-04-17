@@ -21,8 +21,8 @@
   # MySQL Server and AMET database configuration file.
   # For security make file only readable by you. With the following variables
   # These are the only required for meteorological analysis. AQ requires more.
-  # mysqllogin   <- yourlogin
-  # mysqlpasswrd <- yourpassword
+   #mysqllogin   <- 
+   #mysqlpasswrd <- 
   setenv MYSQL_CONFIG  $AMETBASE/configure/amet-config.R
 
   # MySQL database server connection and AMET database
@@ -52,19 +52,19 @@
   # Curtain plot of model, raob and difference on mandatory pressure levels (T/F).
   # NOTE: No site grouping allowed. Script ignores this setting and plots each site.
   # NOTE: SITES below has to be set to RAOB site ID(s) and not ALL for CURTAIN plotting.
-  setenv RAOB_CURTAINM  F 
+  setenv RAOB_CURTAINM  T 
 
   # NATIVE PRESSURE LEVEL ANALYSIS OPTIONS
   # Profiles of model and obs on their native levels for sites below (T/F).
   # NOTE: only done for start time below. Can be ran through loop for mutiple times.
   # NOTE: No site grouping allowed. Script ignores this setting and plots each site.
   # NOTE: Pressure level range defined by AMET_PLIM below.
-  setenv RAOB_PROFILEN  F 
+  setenv RAOB_PROFILEN  T 
 
   # Curtain plot of model with obs profile overlaid using dots (T/F).
   # NOTE: No site grouping allowed. Script ignores this setting and plots each site.
   # NOTE: Pressure level range defined by AMET_PLIM below.
-  setenv RAOB_CURTAINN  F 
+  setenv RAOB_CURTAINN  T 
 
   #  Date range of timeseries where year (YY), month (MM), day (DD) are
   #  the start and end values with one space between. Use two digit MM and DD.
@@ -77,8 +77,9 @@
   #  Observation site ID array. 
   #  "ALL" will get data for all sites, but only applicable for RAOB_PROFILEM option
   #  AMET_GROUPSITES allows grouping (or not) of defined site IDs for RAOB_PROFILEM option
-  set SITES=(KGSO KMHX)
-  set SITES=(ALL)
+  #set SITES=(KGSO KMHX)
+  set SITES=(KGSO)
+  #set SITES=(ALL)
 
   # Should SITES be grouped or averaged (T/F). Grouped sites only work for 
   # profile statistics on mandatory pressure levels via RAOB_PROFILEM T
